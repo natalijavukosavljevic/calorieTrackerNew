@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="container">
+  <div class="row text-primary">
+      <div class="col-md-4 col-md-offset-4"></div>
+      <div class="col-md-4 col-md-offset-4">
+        <h1>Login</h1> 
+        <form method="POST" class="form-group">
+          {% csrf_token %}
+          {{ login_form.as_p}}
+          <button class="btn btn-primary" type="submit">Login</button>
+        </form>
+        <p class="text-center">Don't have an account? <a href="{% url "register" %}">Create an account</a>.</p>
+      </div>
+      <div class="col-md-4 col-md-offset-4"></div>
+  </div>
+{% endblock content %}

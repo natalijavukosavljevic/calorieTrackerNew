@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="container">
+    <div>
+        <h1 class="text-center text-primary pb-3">{{profileObj.user.username}}' summary </h1>
+        <canvas id="dateChart" style="width:100%;max-width:700px" class="mx-auto"></canvas>
+
+        <input type="hidden" id="caloriesList" name="variable" value="{{caloriesList}}">
+        <input type="hidden" id="carbsList" name="variable" value="{{carbsList}}">
+        <input type="hidden" id="proteinsList" name="variable" value="{{proteinsList}}">
+        <input type="hidden" id="fatsList" name="variable" value="{{fatsList}}">
+        <input type="hidden" id="selectedDates" name="variable" value="{{selectedDates}}">
+    </div>
+    <article class="pt-2 text-primary text-center">
+        <h3> What are exactly carbs, proteins and fats? </h3>
+        <p class="pt-2" > Carbohydrates, proteins, and fats are the main types of macronutrients in food (nutrients that are required daily in large quantities). They supply 90% of the dry weight of the diet and 100% of its energy. All three provide energy (measured in calories). These nutrients also differ in how quickly they supply energy. Carbohydrates are the quickest, and fats are the slowest. </p>
+        <div>
+            <p class="text-justify">Carbohydrates, proteins, and fats are digested in the intestine, where they are broken down into their basic units:</p>
+            <ul class="text-justify">
+                <li>Carbohydrates into sugars</li>
+                <li>Proteins into amino acids</li>
+                <li>Fats into fatty acids and glycerol</li>
+              </ul>
+
+            <p class="text-justify">The body uses these basic units to build substances it needs for growth, maintenance, and activity (including other carbohydrates, proteins, and fats).</p>
+
+    </article>
+</div>
+
+    
+{% endblock content %}

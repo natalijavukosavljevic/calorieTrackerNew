@@ -7,7 +7,7 @@ in the pie chart and table. Examine consumptions for the last five days (if ente
 Django, Python, BootStrap, HTML, Javascript, CSS
 
 
-
+`
 # Installation
 * 1 - clone repo 
 * 2 - create a virtual environment and activate

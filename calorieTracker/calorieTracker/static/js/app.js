@@ -1,39 +1,25 @@
-// Invoke Functions Call on Document Loaded
-
-//dodali ovo u js za messages js dodali u main html
-
-
-//da mozemo messages da zatvaramo ovaj hjs problem stavara
-// Invoke Functions Call on Document Loaded
-// document.addEventListener('DOMContentLoaded', function () {
-//   hljs.highlightAll();
-// });
-
 
 
 document.addEventListener("DOMContentLoaded", function(event) {
-  //deo za messages
+  //close messages
   let alertWrapper = document.querySelector('.alert')
   let alertClose = document.querySelector('.alert__close')
-  console.log(alertClose)
-  console.log(alertWrapper)
   if (alertWrapper) {
-    console.log('tu')
     alertClose.addEventListener('click', () =>
       alertWrapper.style.display = 'none'
     )
   }
 
 
-  //deo za pie chart
-  var ctx = document.getElementById('myChart')
+  //pie chart generation
+  let ctx = document.getElementById('myChart')
   if (ctx){
-    var carbsSum = document.getElementById("carbsSum").innerHTML
-    var proteinsSum = document.getElementById("proteinsSum").innerHTML
-    var fatsSum = document.getElementById("fatsSum").innerHTML
-    var caloriesSum = document.getElementById("caloriesSum").innerHTML
+    let carbsSum = document.getElementById("carbsSum").innerHTML
+    let proteinsSum = document.getElementById("proteinsSum").innerHTML
+    let fatsSum = document.getElementById("fatsSum").innerHTML
+    let caloriesSum = document.getElementById("caloriesSum").innerHTML
     console.log(carbsSum)
-    var myLineChart = new Chart(ctx.getContext('2d'), {
+    new Chart(ctx.getContext('2d'), {
         type: 'pie',
         data: {
             labels: ["carbs", "proteins", "fats", "calories"],
@@ -45,27 +31,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
         
     });
  }
-
- var ctxDate=document.getElementById('dateChart')
+ // date chart generation
+ let ctxDate=document.getElementById('dateChart')
  
  if(ctxDate){
-  var caloriesArray = JSON.parse(document.getElementById("caloriesList").value);
-  var selectedDates = JSON.parse(document.getElementById("selectedDates").value);
-  var carbsArray = JSON.parse(document.getElementById("carbsList").value);
-  var proteinsArray = JSON.parse(document.getElementById("proteinsList").value);
-  var fatsArray = JSON.parse(document.getElementById("fatsList").value);
-  console.log(ctxDate)
-  console.log(selectedDates)
-  console.log(caloriesArray)
-      
-    
-    // var xyValues = [
-    //   {x:20, y:7},
-    //   {x:30, y:8},
-    //   {x:40, y:8},
-   
-    // ];
-    new Chart(ctxDate.getContext('2d'), {
+  let caloriesArray = JSON.parse(document.getElementById("caloriesList").value);
+  let selectedDates = JSON.parse(document.getElementById("selectedDates").value);
+  let carbsArray = JSON.parse(document.getElementById("carbsList").value);
+  let proteinsArray = JSON.parse(document.getElementById("proteinsList").value);
+  let fatsArray = JSON.parse(document.getElementById("fatsList").value);
+  new Chart(ctxDate.getContext('2d'), {
       type: "line",
       data: {
         labels: selectedDates,
@@ -121,15 +96,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
    
  }
- //deo za calorieLimit
-  var slider = document.getElementById("rangeCalories");
-  var output = document.getElementById("demo");
-  output.innerHTML = slider.value; // Display the default slider value
+ //calorieLimit tracking
+  let slider = document.getElementById("rangeCalories");
+  if (slider){
+    let output = document.getElementById("demo");
+    output.innerHTML = slider.value; // Display the default slider value
 
-  // Update the current slider value (each time you drag the slider handle)
-  slider.oninput = function() {
-    output.innerHTML = this.value;
+    // Update the current slider value (each time you drag the slider handle)
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+    }
+    
+
   }
+  
 
  
 });

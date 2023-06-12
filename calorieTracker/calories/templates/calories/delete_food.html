@@ -1,23 +1,27 @@
-{% extends 'main.html' %}
+{% extends 'main.html' %} 
 {% block content %}
 <div class="container">
-    <div class="row text-primary pt-5">
-        <div class="col-md-2 col-md-offset-2"></div>
-        <div class="col-md-8 col-md-offset-8 pt-5">
-            <div class="alert alert-primary" role="alert">
-                <form method="POST">
-                    <!-- Security token by Django -->
-                    {% csrf_token %}
-                    Are you sure you want to delete {{consumeDelete.food}} created at {{consumeDelete.created}} ?
-                    <input type="submit" class="btn btn-primary" value="Yes" />
-                    <a class="btn btn-secondary" href="/" role="button">Cancel</a>
-                </form>
-              </div>
-              <div>
-                <p class="text-center"> <span class="font-weight-bold"> NOTE: </span> Deletion of the chosen item would delete it permanently. </p>
-              </div>
-    
-        <div class="col-md-2 col-md-offset-2"></div>
+  <div class="row text-primary pt-5">
+    <div class="col-md-2 col-md-offset-2"></div>
+    <div class="col-md-8 col-md-offset-8 pt-5">
+      <div class="alert alert-primary" role="alert">
+        <form method="POST">
+          <!-- Security token by Django -->
+          {% csrf_token %} Are you sure you want to delete
+          {{consumeDelete.food}} created at {{consumeDelete.created}} ?
+          <input type="submit" class="btn btn-primary" value="Yes" />
+          <a class="btn btn-secondary" href="/" role="button">Cancel</a>
+        </form>
+      </div>
+      <div>
+        <p class="text-center">
+          <span class="font-weight-bold"> NOTE: </span> Deletion of the chosen
+          item would delete it permanently.
+        </p>
+      </div>
+
+      <div class="col-md-2 col-md-offset-2"></div>
     </div>
+  </div>
+  {% endblock content %}
 </div>
-{% endblock content %}

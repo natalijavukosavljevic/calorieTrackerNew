@@ -1,17 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-
-    <ul class="navbar-nav">
-      <li class="nav-item ">
-        <a class="nav-link text-white" href="{% url 'calories' %}">Home </a>
-      </li>
-      {% if request.user.is_authenticated %}
-      <li class="nav-item ">
-        <a class="nav-link text-white" href="{% url 'logout' %}">Logout</a>
-      </li>
-      {% else %}
-      <li class="nav-item ">
-        <a class="nav-link text-white" href="{% url 'login' %}">Login</a>
-      </li>
-      {% endif %}
-    </ul>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link text-white" href="{% url 'calories' %}">Home </a>
+    </li>
+    {% if request.user.is_authenticated %}
+    <li class="nav-item">
+      <a class="nav-link text-white" href="{% url 'logout' %}">Logout</a>
+    </li>
+    {% else %}
+    <li class="nav-item">
+      <a class="nav-link text-white" href="{% url 'login' %}">Login</a>
+    </li>
+    {% endif %}
+  </ul>
 </nav>

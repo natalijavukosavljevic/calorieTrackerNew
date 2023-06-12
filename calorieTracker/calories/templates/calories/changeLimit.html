@@ -1,42 +1,73 @@
-{% extends 'main.html' %}
+{% extends 'main.html' %} 
 {% block content %}
 
-
-
 <div class="container text-center text-primary pt-5">
-    <h2>Limit change</h2>
-    <form method="GET">
-        <div class="row">
-        <div class="col">
-            <div class="slidecontainer">
-                <input class="w-100" type="range" min="1" max="4000" value="50" class="slider"  step="1" id="rangeCalories" name="caloriesLimit">
-                <p>Value: <span id="demo"></span></p>
-            </div>
+  <h2 class="pt-5">Limit change</h2>
+  <form method="GET">
+    <div class="row">
+      <div class="col">
+        <div class="slidecontainer">
+          <input
+            class="w-100"
+            type="range"
+            min="1"
+            max="4000"
+            value="50"
+            class="slider"
+            step="1"
+            id="rangeCalories"
+            name="caloriesLimit"
+          />
+          <p>Value: <span id="demo"></span></p>
         </div>
-        <div class="col">
-            <button class="btn btn-primary" type="submit">Change limit</button>
-        </div>
-        </div>
-    </form>
-    <article class="pt-2">
-        <h3> How Many Calories Should You Eat In a Day? </h3>
-        <p class="text-justify pt-4" > How many calories you should eat in a day will change as your body composition and size, activity level, and health change. Knowing the recommended calorie intake guidelines can provide a better idea of your calorie range. These vary based on whether you are an adult, a teen, or a child. </p>
-        <div>
-            <h4 class="text-justify"> Adults </h4>
-            <p class="text-justify">The recommended calorie intake for adult women ranges from 1,600 calories per day to 2,400 calories per day, according to the 2020-2025 Dietary Guidelines for Americans. For men, the amount is slightly higher, ranging from 2,200 to 3,200 calories per day.</p>
-        </div>
-        <div>
-            <h4 class="text-justify"> Teens </h4>
-            <p class="text-justify">A 13-year-old girl's recommended intake ranges from 1,600 to 2,200 calories daily, with a 2,000 to 2,600 recommended intake for a 13-year-old boy.These amounts increase slightly in the later teen years. The range for girls aged 14 to 18 is 1,800 calories per day to 2,400. The recommended calorie intake for boys in this same age range is somewhere between 2,000 and 3,200 calories.</p>
-        </div>
+      </div>
+      <div class="col">
+        <button class="btn btn-primary" type="submit">Change limit</button>
+      </div>
+    </div>
+  </form>
+  <article class="pt-3">
+    <h4>How Many Calories Should You Eat In a Day?</h4>
+    <p class="text-justify pt-4">
+      How many calories you should eat in a day will change as your body
+      composition and size, activity level, and health change. Knowing the
+      recommended calorie intake guidelines can provide a better idea of your
+      calorie range. These vary based on whether you are an adult, a teen, or a
+      child.
+    </p>
+    <div>
+      <h4 class="text-justify">Adults</h4>
+      <p class="text-justify">
+        The recommended calorie intake for adult women ranges from 1,600
+        calories per day to 2,400 calories per day, according to the 2020-2025
+        Dietary Guidelines for Americans. For men, the amount is slightly
+        higher, ranging from 2,200 to 3,200 calories per day.
+      </p>
+    </div>
+    <div>
+      <h4 class="text-justify">Teens</h4>
+      <p class="text-justify">
+        A 13-year-old girl's recommended intake ranges from 1,600 to 2,200
+        calories daily, with a 2,000 to 2,600 recommended intake for a
+        13-year-old boy.These amounts increase slightly in the later teen years.
+        The range for girls aged 14 to 18 is 1,800 calories per day to 2,400.
+        The recommended calorie intake for boys in this same age range is
+        somewhere between 2,000 and 3,200 calories.
+      </p>
+    </div>
 
-        <div>
-            <h4 class="text-justify"> Children </h4>
-            <p class="text-justify">Children between the ages of 2 and 3 need between 1,000 and 1,400 calories daily. Where they fall in this range depends on how active they are.At 4 to 8 years of age, the range starts at 1,200 calories daily and increases to 1,800 calories for girls and 2,000 calories for boys. At 9 to 13 years, the calorie range is 1,400 to 2,200 calories per day for girls and 1,600 to 2,600 calories daily for boys</p>
-        </div>
-
-    </article>
+    <div>
+      <h4 class="text-justify">Children</h4>
+      <p class="text-justify">
+        Children between the ages of 2 and 3 need between 1,000 and 1,400
+        calories daily. Where they fall in this range depends on how active they
+        are.At 4 to 8 years of age, the range starts at 1,200 calories daily and
+        increases to 1,800 calories for girls and 2,000 calories for boys. At 9
+        to 13 years, the calorie range is 1,400 to 2,200 calories per day for
+        girls and 1,600 to 2,600 calories daily for boys
+      </p>
+    </div>
+  </article>
 </div>
 
 {% endblock content %}
-

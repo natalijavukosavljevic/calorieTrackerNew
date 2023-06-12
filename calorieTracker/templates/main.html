@@ -3,13 +3,11 @@
 
 <html lang="en">
 <head>
-
+      <link rel="shortcut icon" href="">
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link  href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-      {% comment %} <script src="{% static 'js/bootstrap.min.js' %}"></script> {% endcomment %}
-
       <title>Food tracker</title>
 </head>
 <body style="background-image: url('{% static "images/b1.jpg"%}'); background-size: cover";>
@@ -27,10 +25,6 @@
    {% endfor %}
    {% endif %}
 
-<!--       nadji u ui kitu i ovde se nalazi u staticu kopirano odatle-->
-<!--   message tag je on npr message.error u view tag ce biti error-->
-
-
 
    {% block content %}
 
@@ -43,7 +37,6 @@
    <p class="pt-5">Copyright © 2023 Foodtrack<br>
 </footer>
 <script src="{% static 'js/app.js' %}"></script>
-{% comment %} <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js'></script> {% endcomment %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
 
